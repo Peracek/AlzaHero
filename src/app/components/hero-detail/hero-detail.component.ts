@@ -12,4 +12,8 @@ export class HeroDetailComponent implements OnInit {
   ngOnInit() {
   }
 
+  back() {
+    console.log("back hit")
+  }
+
 }
