@@ -3,5 +3,6 @@
 </p>
 
 <ul>
-  <li *ngFor="let hero of heroes"><a href="/hero/{{hero.id}}">{{hero.name}}</a></li>
+  <li *ngFor="let hero of heroes"><a 
+    [routerLink]="['/hero', hero.id]">{{hero.name}}</a></li>
 </ul>
