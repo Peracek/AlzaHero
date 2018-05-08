@@ -1,8 +1,7 @@
-<p>
-  heroes works!
-</p>
+<h2>All heroes</h2>
 
-<ul>
-  <li *ngFor="let hero of heroes"><a 
-    [routerLink]="['/hero', hero.id]">{{hero.name}}</a></li>
-</ul>
+<mat-nav-list>
+  <a mat-list-item
+    *ngFor="let hero of heroes"
+    [routerLink]="['/hero', hero.id]"> {{ hero.name }} </a>
+</mat-nav-list>

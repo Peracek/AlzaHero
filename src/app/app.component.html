@@ -1,7 +1,13 @@
-Welcome!
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <span>Alza hero</span>
+    
+    <button mat-button routerLink="/dashboard">Dashboard</button>
+    <button mat-button routerLink="/heroes">Heroes</button>
+  </mat-toolbar-row>
+</mat-toolbar>
 
-<nav>
-  <a routerLink="/dashboard">Dashboard</a>
-  <a routerLink='/heroes'>Heroes</a>
-</nav>
-<router-outlet></router-outlet>
+<section class="content">
+    <router-outlet></router-outlet>
+</section>
+

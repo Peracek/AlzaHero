@@ -25,7 +25,7 @@ export class HeroService {
   }
 
   topN(limit: number) {
-    return heroes
+    return [...heroes]
       .sort((a, b) => a.name.localeCompare(b.name))
       .slice(0, limit)
   }
