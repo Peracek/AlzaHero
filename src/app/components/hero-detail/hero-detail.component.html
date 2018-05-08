@@ -1,7 +1,12 @@
 <h2>Hero: {{hero.name}}</h2>
 
-<mat-form-field>
-  <input matInput required [(ngModel)]="hero.name" placeholder="Name">
-</mat-form-field>
+<p>Form value: {{ heroForm.value.name || hero.name }}</p>
 
-<button  mat-button (click)="location.back()">Go back</button>
+<form [formGroup]="heroForm" (ngSubmit)="onSubmit()">
+<mat-form-field>
+  <!-- <input matInput required [(ngModel)]="hero.name" placeholder="Name"> -->
+  <input matInput formControlName="name" placeholder="Name">
+</mat-form-field>
+<button type="submit" [disabled]="heroForm.pristine">Save</button>
+<button type="button" (click)="location.back()" [disabled]="heroForm.pristine">Back</button>
+</form>
