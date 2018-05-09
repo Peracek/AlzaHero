@@ -1,6 +1,5 @@
 <h2>Hero: {{hero.name}}</h2>
 
-<<<<<<< HEAD
 <form [formGroup]="heroForm" (ngSubmit)="onSubmit()">
 <mat-form-field>
   <input matInput formControlName="name" placeholder="Name">
@@ -12,15 +11,4 @@
   mat-button
   (click)="location.back()" 
   [disabled]="heroForm.pristine">Back</button>
-=======
-<p>Form value: {{ heroForm.value.name || hero.name }}</p>
-
-<form [formGroup]="heroForm" (ngSubmit)="onSubmit()">
-<mat-form-field>
-  <!-- <input matInput required [(ngModel)]="hero.name" placeholder="Name"> -->
-  <input matInput formControlName="name" placeholder="Name">
-</mat-form-field>
-<button type="submit" [disabled]="heroForm.pristine">Save</button>
-<button type="button" (click)="location.back()" [disabled]="heroForm.pristine">Back</button>
->>>>>>> 5172e234ea80ee4cb839f447f947dcb1a56280b5
 </form>
